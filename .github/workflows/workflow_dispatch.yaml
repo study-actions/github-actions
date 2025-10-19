@@ -1,4 +1,5 @@
-name: workflow-dispatch
+name: workflow_dispatch
+
 on:
   workflow_dispatch:
     inputs:
@@ -29,5 +30,5 @@ jobs:
         echo github actions
     - name: echo inputs
       run: |
-        echo ${{input.name}}
-        echo ${{input.environment}}
+        echo "${{ inputs.name }}"
+        echo "${{ inputs.environment }}"
